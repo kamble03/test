@@ -6,18 +6,19 @@ stages{
      steps {
     sh 'cp -r index.html  /var/www/html'
 }
-
+}
      stage('copy-qa'){
       steps {
      sh 'cp -r qa.html  /var/www/html'
+}
 }
 stage('copy-dev'){
       steps {
      sh 'cp -r dev.html  /var/www/html'
 }
 }
-
+}
 }
 
-}
+
 }
