@@ -3,7 +3,7 @@ pipeline {
              stages {
                   stage ('copy-index') {
                     steps {
-                    sh 'cp -r index.html  /var/www/html'
+                     'cp -r index.html  /var/www/html'
 }
 
 }
@@ -20,6 +20,17 @@ stage ('dev-index') {
 }
 
 }
+stage ('install apche') {
+                    steps {
+                    'sudo yum install httpd -y'
+}
 
+}
+stage ('start-apche') {
+                    steps {
+                    'service httpd start'
+}
+
+}
 }
 }
